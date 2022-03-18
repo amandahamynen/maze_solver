@@ -1,5 +1,10 @@
-.env
-__pycache__
-venv
 .vscode
+.coverage
+.pytest_cache
+htmlcov
+__pycache__
+*.pyc
+*.pyo
+src/__pycache__/
 .DS_Store
+venv
