@@ -34,7 +34,7 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-4. Asenna projektinriippuvuuden virtuaaliympäristössä komennolla
+4. Asenna projektin tarvitsemat kirjastot virtuaaliympäristössä komennolla
 
 ```python
 pip install -r requirements.txt
