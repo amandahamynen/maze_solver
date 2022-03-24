@@ -19,10 +19,10 @@ class Tremaux:
         self.maali = (1,1)
         self.maali_loytynyt = False
         self.nykyinen_ruutu = (self.aloitus[0], self.aloitus[1])
-        self.jaljet = self._luo_ruudukko(self.n)
+        self.jaljet = self.luo_ruudukko(self.n)
         self.tremaux_etsinta = []
 
-    def _luo_ruudukko(self, n):
+    def luo_ruudukko(self, n):
 
         """ Luo dictionary-tyyppisen ruudukon, jonka avulla seurataan labyrintissa 
         kuljettuja reittejä.
@@ -48,7 +48,7 @@ class Tremaux:
                 ruudukko[i] = 2
         return ruudukko
 
-    def _laske_naapuriruudut(self, ruutu, arvo):
+    def laske_naapuriruudut(self, ruutu, arvo):
 
         """ Laskee joko seinien tai avonaisten polkujen määrän tietyssä ruudussa.
 
@@ -73,7 +73,7 @@ class Tremaux:
             lkm += 1
         return lkm
 
-    def _mahdolliset_liikkeet(self, ruutu):
+    def mahdolliset_liikkeet(self, ruutu):
 
         """ Palauttaa listan, joka sisältää sellaiset ruudut, joihin on mahdollista
         kulkea tietystä ruudusta. Lisäksi ilmaisee jokaisen mahdollisen ruudun kohdalla,
@@ -119,14 +119,14 @@ class Tremaux:
                 self.maali_loytynyt = True
                 break
 
-            seinien_lkm = self._laske_naapuriruudut(self.nykyinen_ruutu, 0)
+            seinien_lkm = self.laske_naapuriruudut(self.nykyinen_ruutu, 0)
 
             if seinien_lkm >= 3:
                 self.jaljet[self.nykyinen_ruutu[0], self.nykyinen_ruutu[1]] += 2
             else:
                 self.jaljet[self.nykyinen_ruutu[0], self.nykyinen_ruutu[1]] += 1
             
-            mahdolliset_liikkeet = self._mahdolliset_liikkeet(self.nykyinen_ruutu)
+            mahdolliset_liikkeet = self.mahdolliset_liikkeet(self.nykyinen_ruutu)
 
             if len(mahdolliset_liikkeet) >= 2:
                 self.jaljet[self.nykyinen_ruutu[0], self.nykyinen_ruutu[1]] = 1
