@@ -1,7 +1,18 @@
 import random
 
 class Tremaux:
+
+    """ Luokka, joka vastaa Trémauxin algoritmin toteutuksesta. """
+
     def __init__(self, labyrintti, n):
+
+        """ Luokan konstruktori.
+        Args:
+            labyrintti: moduulin Pyamaze avulla luotu olio, jolla on käytössä
+            moduulin omat metodit.
+            n: neliömuotoisen labyrintin leveys/korkeus.
+        """
+
         self.labyrintti = labyrintti
         self.n = n
         self.aloitus = (n,n)
@@ -12,6 +23,17 @@ class Tremaux:
         self.tremaux_etsinta = []
 
     def _luo_ruudukko(self, n):
+
+        """ Luo dictionary-tyyppisen ruudukon, jonka avulla seurataan labyrintissa 
+        kuljettuja reittejä.
+
+        Args:
+            n: Labyrintin leveys/korkeus.
+        Returns:
+            ruudukko, tyypiltään dictionary. Ruudukon arvot ilmaisevat, onko kyseiseen ruutuun
+            mahdollista kulkea.
+        """
+
         rivit = [i for i in range(0,n+2)] * (n+2)
         sarakkeet = []
         x = 0
@@ -27,6 +49,17 @@ class Tremaux:
         return ruudukko
 
     def _laske_naapuriruudut(self, ruutu, arvo):
+
+        """ Laskee joko seinien tai avonaisten polkujen määrän tietyssä ruudussa.
+
+        Args:
+            ruutu: metodille annettava tuple-muotoinen arvo. Ensimmäinen arvo on ruudun
+            x-koordinaatti ja toinen y-koordinaatti.
+            arvo: Joko 0 tai 1. Jos 0, niin seinä, jos 1, niin avoin polku.
+        Returns:
+            lkm: tyypiltään integer. Seinien/avointen polkujen lukumäärä.
+        """
+
         x = ruutu[0]
         y = ruutu[1]
         lkm = 0
@@ -41,6 +74,20 @@ class Tremaux:
         return lkm
 
     def _mahdolliset_liikkeet(self, ruutu):
+
+        """ Palauttaa listan, joka sisältää sellaiset ruudut, joihin on mahdollista
+        kulkea tietystä ruudusta. Lisäksi ilmaisee jokaisen mahdollisen ruudun kohdalla,
+        kuinka monta kertaa kyseisestä ruudusta on kuljettu.
+
+        Args:
+            ruutu: tuple-tyyppinen arvo, jonka ensimmäinen arvo on ruudun x-koordinaatti
+            ja toinen y-koordinaatti.
+        Returns:
+            mahdolliset: tyypiltään lista, joka sisältää mahdolliset liikkeet. Jokaisen alkion
+            nollas indeksi on kyseisen liikkeen x-koordinaatti, ensimmäinen y-koordinaatti ja
+            toinen indeksi kertoo, kuinka monta kertaa kyseisessä ruudussa on käyty.
+        """
+
         x = ruutu[0]
         y = ruutu[1]
         mahdolliset = []
@@ -56,6 +103,14 @@ class Tremaux:
         return mahdolliset
 
     def tremaux(self):
+
+        """ Löytää reitin labyrintista noudattaen Trémauxin algoritmia.
+
+        Returns:
+            tremaux_etsinta: tyypiltään lista. Sisältää järjestyksessä ne ruudut, jotka
+            algoritmi käy läpi etsiessään maaliruutua labyrintissa.
+        """
+
         while not self.maali_loytynyt:
 
             self.tremaux_etsinta.append(self.nykyinen_ruutu)
