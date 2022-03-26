@@ -51,5 +51,7 @@ pip install -r requirements.txt
 python3 src/index.py
 ```
 
+## Muuta
+
 Tällä hetkellä tapa, millä labyrintin kokoon voi vaikuttaa, on muokkaamalla tiedostossa index.py rivillä 15 olevan muuttujan x arvoa. Lisäksi
 simuloinnin nopeutta voi säätää muokkaamalla delay-arvoa rivillä 11 (tällä hetkellä 100ms)
