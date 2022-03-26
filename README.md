@@ -1,5 +1,7 @@
 # Maze solver
 
+![GitHub Actions](https://github.com/amandahamynen/maze_solver/workflows/CI/badge.svg)
+
 Ohjelma toteutettu kurssilla tiralabra keväällä 2022.
 
 ## Dokumentaatio
