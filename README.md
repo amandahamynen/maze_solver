@@ -8,6 +8,8 @@ Ohjelma toteutettu kurssilla tiralabra keväällä 2022.
 ## Viikkoraportit
 [Viikkoraportti 1](https://github.com/amandahamynen/maze_solver/blob/main/dokumentaatio/viikkoraportti_1.md)
 
+[Viikkoraportti 2](https://github.com/amandahamynen/maze_solver/blob/main/dokumentaatio/viikkoraportti_2.md)
+
 ## Käyttöohje
 
 Projekti on tehty pythonin versiolla 3.8.10. Muilla python versioilla projektin toimivuutta ei ole taattu. 
