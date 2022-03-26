@@ -20,5 +20,8 @@ jobs:
         run: |
           pip install --upgrade pip
           pip install -r requirements.txt
-      - name: Run pylint
-        run: pylint src
+      - name: Install pylint
+        run: pip install pylint
+      - name: Analysing the code with pylint
+        run: |
+         find . -name 'src' -exec pylint --rcfile=".pylintrc" {} \;
