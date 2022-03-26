@@ -8,7 +8,7 @@ algoritmin tutustumiseen, ja sen toiminnan hahmotteluun kynällä ja paperilla. 
 päivänä lähdin toteuttamaan algoritmia pythonilla, ja innostuinkin tämän toteuttamisesta niin paljon, etten halunnut lopettaa ennen kuin sain toimivan
 ohjelman! Seuraavana päivänä lisäsin ohjelmistotekniikan kurssin materiaalin ohjeiden mukaisen docstring-dokumentaation luokalle. Tämän jälkeen lähdin
 testejä, jotka jälkikäteen mietittynä olisi ollut järkevä lisätä algoritmin rakentamisen yhteydessä (...). Lisäksi lauantaina yritin saada testikattavuuden
-toimimaan codecovin kautta, mutta github actions tuottaa tällä hetkellä ongelmia tkinterin kanssa. Testikattavuus on nähtävillä [tästä](https://github.com/amandahamynen/maze_solver/blob/main/dokumentaatio/coverage_report_week2.png).
+toimimaan codecovin kautta, mutta github actions tuottaa tällä hetkellä ongelmia tkinterin kanssa. Testikattavuus on nähtävillä [tästä](https://github.com/amandahamynen/maze_solver/blob/main/dokumentaatio/coverage_report_week2.png). Pylint (koodin laatutarkistus) nähtävillä github actionsissa.
 
 ## Mitä opin, mikä jäi epäselväksi ja mitä teen seuraavaksi?
 
