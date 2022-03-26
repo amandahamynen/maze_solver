@@ -7,7 +7,8 @@ kaksi uutta algoritmia, ja päädyin Trémauxin algoritmiin ja joko wall followe
 algoritmin tutustumiseen, ja sen toiminnan hahmotteluun kynällä ja paperilla. Tämän jälkeen lähdin miettiään, miten toteutan sen pythonilla. Seuraavana
 päivänä lähdin toteuttamaan algoritmia pythonilla, ja innostuinkin tämän toteuttamisesta niin paljon, etten halunnut lopettaa ennen kuin sain toimivan
 ohjelman! Seuraavana päivänä lisäsin ohjelmistotekniikan kurssin materiaalin ohjeiden mukaisen docstring-dokumentaation luokalle. Tämän jälkeen lähdin
-testejä, jotka jälkikäteen mietittynä olisi ollut järkevä lisätä algoritmin rakentamisen yhteydessä (...).
+testejä, jotka jälkikäteen mietittynä olisi ollut järkevä lisätä algoritmin rakentamisen yhteydessä (...). Lisäksi lauantaina yritin saada testikattavuuden
+toimimaan codecovin kautta, mutta github actions tuottaa tällä hetkellä ongelmia tkinterin kanssa.
 
 ## Mitä opin, mikä jäi epäselväksi ja mitä teen seuraavaksi?
 
@@ -27,4 +28,4 @@ Torstai 24.3.2022 2h
 
 Perjantai 25.3.2022: 2h
 
-Lauantai 26.3.2022: 1h
+Lauantai 26.3.2022: 2h
