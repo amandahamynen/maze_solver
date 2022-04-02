@@ -4,7 +4,9 @@
 Tutustuin wall follower-ja dead end filling algoritmeihin. Wall followerista vaikutti mielestäni todella suoraviivaiselta ja helpolta toteuttaa, 
 joten päädyin perehtymään siihen hieman tarkemmin. Tämän jälkeen lähdin ohjelmoimaan algoritmia, ja se olikin loppujen lopuksi melko vaivaton tehdä. 
 Tällä hetkellä algoritmin koodi on todella toisteista, mutta mielestäni ymmärrettävää. Uskon palaavani parantelemaan tätä tulevilla viikoilla.
-Seuraavana päivänä lisäsin koodiin docstringit ja tein koodille yksikkötestit. Lisäksi aloin laatimaan testausdokumenttia. 
+Seuraavana päivänä lisäsin koodiin docstringit ja tein koodille yksikkötestit. Lisäksi aloin laatimaan testausdokumenttia. Testikattavuus on nähtävillä
+[tästä](https://github.com/amandahamynen/maze_solver/blob/main/dokumentaatio/coverage_report_week3.png) ja laadunseurannan voi nähdä pylintin avulla
+esim. github actionsista.
 
 ## Mitä opin, mikä jäi epäselväksi ja mitä teen seuraavaksi?
 Opin sen, että wall followerista on periaatteessa kaksi versiota (toinen seuraa vasenta seinää ja toinen oikeaa). Toteutin ohjelmassani niistä vain 
