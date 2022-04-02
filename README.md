@@ -15,6 +15,8 @@ Ohjelma toteutettu kurssilla tiralabra keväällä 2022.
 ## Testikattavuus
 [Viikko 2](https://github.com/amandahamynen/maze_solver/blob/main/dokumentaatio/coverage_report_week2.png)
 
+[Viikko 3](https://github.com/amandahamynen/maze_solver/blob/main/dokumentaatio/coverage_report_week3.png)
+
 ## Käyttöohje
 
 Projekti on tehty pythonin versiolla 3.8.10. Muilla python versioilla projektin toimivuutta ei ole taattu. 
@@ -55,5 +57,5 @@ python3 src/index.py
 
 ## Muuta
 
-Tällä hetkellä tapa, millä labyrintin kokoon voi vaikuttaa, on muokkaamalla tiedostossa index.py rivillä 15 olevan muuttujan x arvoa. Lisäksi
-simuloinnin nopeutta voi säätää muokkaamalla delay-arvoa rivillä 11 (tällä hetkellä 100ms)
+Tällä hetkellä tapa, millä labyrintin kokoon voi vaikuttaa, on muokkaamalla tiedostossa index.py olevan muuttujan x arvoa. Lisäksi
+simuloinnin nopeutta voi säätää muokkaamalla delay-arvoa.
