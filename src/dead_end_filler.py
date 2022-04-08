@@ -125,14 +125,18 @@ class DeadEndFiller:
         """
 
         self.etsi_ja_merkitse_umpikujat()
-        self.nykyinen_ruutu = self.umpikujat[0]
+        if self.umpikujat:
+            self.nykyinen_ruutu = self.umpikujat[0]
+        else:
+            self.nykyinen_ruutu = self.aloitus
 
         while True:
 
             if self.nykyinen_ruutu == self.aloitus:
-                if len(self.umpikujat) == 0:
+                if len(self.umpikujat) <= 1:
                     break
-                else:
+                elif len(self.umpikujat) >= 2:
+                    self.umpikujat.pop(0)
                     self.nykyinen_ruutu = self.umpikujat[0]
             if self.nykyinen_ruutu == self.maali:
                 self.etsinta.append(self.maali)
@@ -158,6 +162,10 @@ class DeadEndFiller:
                 break
             seuraava = self.mahdolliset_liikkeet(self.nykyinen_ruutu)
             self.nykyinen_ruutu = (seuraava[0][0], seuraava[0][1])
+
+        if not self.etsinta:
+            self.etsinta = [self.aloitus]
+
 
         return self.etsinta, self.reitti
         
