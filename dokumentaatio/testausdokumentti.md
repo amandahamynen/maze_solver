@@ -25,7 +25,9 @@ generoimisessa kestää pitkä aika, joten en ole näitä testejä vielä tehnyt
 
 
 ## Testauskattavuus
-<img width="766" alt="coverage_report_week3" src="https://user-images.githubusercontent.com/55439398/161381706-54653c1a-3f62-4ec8-bb05-7ad0a3fc5c89.png">
+
+<img width="828" alt="coverage_report_week4" src="https://user-images.githubusercontent.com/55439398/162578722-90e22d6a-3cf6-40db-98ab-160e3d457e6a.png">
+
 
 ## Miten testata unittestit omalla koneella
 
@@ -40,3 +42,13 @@ coverage html
 ```
 
 Komennon suorittaminen luo projektin juurihakemistoon hakemiston htmlcov. Avaamalla hakemiston tiedoston index.html selaimessa aukeaa testikattavuusraportti.
+
+## Miten suorittaa suorituskykytestaus
+
+Kun olet projektin virtuaaliympäristössä, suorituskykytestaus onnistuu komennolla
+```python
+python3 src/suorituskykytestaus.py
+```
+
+Komennon suorittamisen jälkeen tulee syöttää labyrintin koko antamalla yksi kokonaislukuarvo.
+
