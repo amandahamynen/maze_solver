@@ -65,5 +65,10 @@ python3 src/index.py
 
 ## Muuta
 
-Tällä hetkellä tapa, millä labyrintin kokoon voi vaikuttaa, on muokkaamalla tiedostossa index.py olevan muuttujan x arvoa. Lisäksi
-simuloinnin nopeutta voi säätää muokkaamalla delay-arvoa.
+Suorituskykytestit voi suorittaa komennolla
+
+```python
+python3 src/suorituskykytestaus.py
+```
+
+Tällä hetkellä ohjelmassa on mitä luultavimmin bugeja, mitkä tulevat esiin virheellisillä syötteillä. Nämä korjataan myöhemmin.
