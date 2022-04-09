@@ -65,6 +65,8 @@ python3 src/index.py
 
 ## Muuta
 
+En suosittele yrittämään visualisoimaan labyrintteja, joiden koko on yli 100x100, sillä niiden alustaminen kestää jonkin aikaa. Samoin suorituskykytestaus hidastuu selvästi, kun yritetään testata yli 2000x2000 labyrinttejä.
+
 Suorituskykytestit voi suorittaa komennolla
 
 ```python
