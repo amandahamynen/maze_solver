@@ -3,6 +3,7 @@ from tremaux import Tremaux
 from left_wall_follower import LeftWallFollower
 from dead_end_filler import DeadEndFiller
 import os
+import time
 
 class App:
     def __init__(self, io):
@@ -13,6 +14,8 @@ class App:
             3: self.visualise_dead_end_filler,
             4: self.lopeta
         }
+        self.aloitus_aika = 0
+        self.lopetus_aika = 0
 
     def visualise_tremaux(self):
         while True:
@@ -29,9 +32,11 @@ class App:
                 self.io.write("Nopeuden tulee olla >= 1.")
         m = maze(koko,koko)
         m.CreateMaze()
-        print(m.maze_map)
         t = Tremaux(m, koko)
+        self.aloitus_aika = time.time()
         tremaux_reitti = t.tremaux()
+        self.lopetus_aika = time.time()
+        self.io.write(f"Algoritmiin kulunut aika: {self.lopetus_aika - self.aloitus_aika} s")
         a=agent(m,filled=True,footprints=True)
         m.tracePath({a:tremaux_reitti}, delay=nopeus)
         m.run()
@@ -52,7 +57,9 @@ class App:
         m = maze(koko,koko)
         m.CreateMaze()
         f = LeftWallFollower(m, koko)
+        self.aloitus_aika = time.time()
         wall_follower_reitti = f.wall_follower()
+        self.lopetus_aika = time.time()
         a=agent(m,filled=True, shape='arrow')
         m.tracePath({a:wall_follower_reitti}, delay=nopeus)
         m.run()
@@ -73,7 +80,9 @@ class App:
         m = maze(koko,koko)
         m.CreateMaze()
         d = DeadEndFiller(m, koko)
+        self.aloitus_aika = time.time()
         dead_end_filler_etsinta, dead_end_filler_reitti = d.dead_end_filling()
+        self.lopetus_aika = time.time()
         a=agent(m,filled=True,footprints=True, color=COLOR.red)
         b=agent(m,filled=True,footprints=True, color=COLOR.green)
         m.tracePath({a:dead_end_filler_etsinta},showMarked=True, delay=nopeus)
@@ -107,6 +116,7 @@ class App:
                 toiminta = self.komennot.get(komento_id)
                 if toiminta:
                     toiminta()
+                    self.io.write(f"Algoritmiin kulunut aika: {self.lopetus_aika - self.aloitus_aika} s")
                     self.lopeta()
                 else:
                     self.io.write("Virheellinen syöte \n")
