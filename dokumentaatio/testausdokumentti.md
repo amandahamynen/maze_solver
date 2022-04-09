@@ -7,7 +7,7 @@ Testit löytyvät src/tests kansiosta. Testejä varten data-kansioon on valmiiks
 Suorituskykytestaus toimii komennolla python3 src/suorituskykytestaus.py. Tällä hetkellä tapa testata suorituskykyä on antamalla haluama labyrintin koko,
 jonka jälkeen jokaisen algoritmin suoritusnopeus mitataan samassa, satunnaisesti generoidussa, labyrintissa. Tulokset tulostuvat komentoriville, ja
 suoritusnopeus ilmoitetaan sekunteina. Huomattavaa on, että labyrintin generoimisessa myös kestää jonkin aikaa varsinkin suurilla syötteillä (labyrintin
-kooksi valittu > 5000 x 5000), joten lisäsin tulostukseen tähän kuluvan ajan. Labyrinttien generoiminen tapahtuu python-moduulin Pyamaze avulla.
+kooksi valittu > 5000), joten lisäsin tulostukseen tähän kuluvan ajan. Labyrinttien generoiminen tapahtuu python-moduulin Pyamaze avulla.
 
 ## Millaisilla syötteillä suorituskykytestaus tehtiin
 
