@@ -36,7 +36,6 @@ class App:
         self.aloitus_aika = time.time()
         tremaux_reitti = t.tremaux()
         self.lopetus_aika = time.time()
-        self.io.write(f"Algoritmiin kulunut aika: {self.lopetus_aika - self.aloitus_aika} s")
         a=agent(m,filled=True,footprints=True)
         m.tracePath({a:tremaux_reitti}, delay=nopeus)
         m.run()
