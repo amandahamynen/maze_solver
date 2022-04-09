@@ -4,6 +4,21 @@ Ohjelma on tällä hetkellä automaattisesti testattavissa unittesteillä. Unitt
 
 Testit löytyvät src/tests kansiosta. Testejä varten data-kansioon on valmiiksi luotu 5x5-labyrintti. Päädyin testaamaan valmiiksi luotua labyrinttia sen vuoksi, että useassa unittestissä tulee testata, osaako ohjelma tulkita oikein tiettyä ruutua labyrintissa. Jos labyrintti generoitaisiin satunnaisesti jokaisen testauksen yhteydessä, niin tämä testaus ei onnistuisi (tai en ainakaan tiedä tähän hätään, miten sen toteuttaisin). 
 
+Suorituskykytestaus toimii komennolla python3 src/suorituskykytestaus.py. Tällä hetkellä tapa testata suorituskykyä on antamalla haluama labyrintin koko,
+jonka jälkeen jokaisen algoritmin suoritusnopeus mitataan samassa, satunnaisesti generoidussa, labyrintissa. Tulokset tulostuvat komentoriville, ja
+suoritusnopeus ilmoitetaan sekunteina. Huomattavaa on, että labyrintin generoimisessa myös kestää jonkin aikaa varsinkin suurilla syötteillä (labyrintin
+kooksi valittu > 5000 x 5000), joten lisäsin tulostukseen tähän kuluvan ajan. Labyrinttien generoiminen tapahtuu python-moduulin Pyamaze avulla.
+
+## Millaisilla syötteillä suorituskykytestaus tehtiin
+
+Tällä hetkellä on testattu algoritmien toiminta 10x10, 100x100, 500x500, 1000x1000, 2000x2000 ja 5000x5000 labyrinteissä. Suurimmilla syötteillä labyrintin
+generoimisessa kestää pitkä aika, joten en ole näitä testejä vielä tehnyt. Alla taulukko tuloksista.
+
+| Labyrintin koko | Trémaux    | Left Wall Follower | Dead-End Filler |
+|-----------------|------------|--------------------|-----------------|
+| 10 x 10         | 0.0002551s | 0.0000209s         | 0.0004391s      |
+
+
 ## Testauskattavuus
 <img width="766" alt="coverage_report_week3" src="https://user-images.githubusercontent.com/55439398/161381706-54653c1a-3f62-4ec8-bb05-7ad0a3fc5c89.png">
 
