@@ -2,6 +2,7 @@ from pyamaze import maze
 from tremaux import Tremaux
 from left_wall_follower import LeftWallFollower
 from dead_end_filler import DeadEndFiller
+from bfs import Leveyshaku
 import time
 
 def main(koko):
@@ -25,6 +26,11 @@ def main(koko):
     d = DeadEndFiller(m, koko)
     lopetus = time.time()
     print(f"Dead end filler: {lopetus - aloitus} s")
+
+    aloitus = time.time()
+    b = Leveyshaku(m, koko)
+    lopetus = time.time()
+    print(f"Leveyshaku: {lopetus - aloitus} s")
 
 
 if __name__ == '__main__':

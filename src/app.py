@@ -2,6 +2,7 @@ from pyamaze import maze, agent, COLOR
 from tremaux import Tremaux
 from left_wall_follower import LeftWallFollower
 from dead_end_filler import DeadEndFiller
+from bfs import Leveyshaku
 import os
 import time
 
@@ -12,7 +13,8 @@ class App:
             1: self.visualise_tremaux,
             2: self.visualise_left_wall_follower,
             3: self.visualise_dead_end_filler,
-            4: self.lopeta
+            4: self.visualise_bfs,
+            5: self.lopeta
         }
         self.aloitus_aika = 0
         self.lopetus_aika = 0
@@ -88,6 +90,29 @@ class App:
         m.tracePath({b:dead_end_filler_reitti},showMarked=True, delay=nopeus)
         m.run()
 
+    def visualise_bfs(self):
+        while True:
+            koko = int(self.io.read("Labyrintin koko (anna yksi kokonaisluku): ").strip())
+            if koko >= 1:
+                break
+            else:
+                self.io.write("Koon tulee olla >= 1.")
+        while True:
+            nopeus = int(self.io.read("Simuloinnin nopeus millisekunteina (suositeltu 50): ").strip())
+            if nopeus >= 1:
+                break
+            else:
+                self.io.write("Nopeuden tulee olla >= 1.")
+        m = maze(koko,koko)
+        m.CreateMaze()
+        b = Leveyshaku(m, koko)
+        self.aloitus_aika = time.time()
+        leveyshaku_etsinta = b.BFS()
+        self.lopetus_aika = time.time()
+        a=agent(m,filled=True, footprints=True)
+        m.tracePath({a:leveyshaku_etsinta}, delay=nopeus)
+        m.run()
+
     def lopeta(self):
         raise SystemExit()
 
@@ -103,7 +128,8 @@ class App:
         self.io.write(" 1. Trémaux")
         self.io.write(" 2. Left Wall Follower")
         self.io.write(" 3. Dead End Filler")
-        self.io.write(" 4. Lopeta ohjelma\n")
+        self.io.write(" 4. Leveyshaku")
+        self.io.write(" 5. Lopeta ohjelma\n")
 
     def run(self):
         self.clearConsole()
