@@ -27,7 +27,11 @@ Ohjelma toteutettu kurssilla tiralabra keväällä 2022.
 
 [Viikko 4](https://github.com/amandahamynen/maze_solver/blob/main/dokumentaatio/coverage_report_week4.png)
 
+[Viikko 5](https://github.com/amandahamynen/maze_solver/blob/main/dokumentaatio/coverage_report_week5.png)
+
 ## Käyttöohje
+
+HUOM. Tällä hetkellä saattaa olla ongelmia asentaa projektin tarvitsemia kirjastoja linuxilla (kts. [issue](https://github.com/amandahamynen/maze_solver/issues/1)). MacOs ja Windows 10 kaikki vaikuttaa toimivan.
 
 Projekti on tehty pythonin versiolla 3.8.10. Muilla python versioilla projektin toimivuutta ei ole taattu. 
 
