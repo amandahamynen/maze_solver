@@ -15,6 +15,11 @@ Dokumentaatiota sain hieman edistettyä.
 Opin, ettei projektini 100% varmuudella toimikaan ilmeisesti ainakaan linuxilla. Toivoisin saavani varmistuksen labtoolin palautteessa, että 
 toimiiko projekti kuten pitää vai onko siinä toisiaankin ongelma. Seuraavaksi alan tekemään testejä ja koitan selvitellä edellä mainittua ongelmaa. 
 
+EDIT. Testasin VMware Horizonin avulla Cubbli Linux 18, ja ongelma vaikuttaa korjaantuvan, jos käyttää komentoa pip install wheel ennen komentoa pip install -r requirements.txt. Toisaalta itse visualisointi ei näytä toimivan, sillä tkinter ikkuna on tyhjä (kuva alla). En ole varma, mistä ongelma johtuu.
+
+<img width="666" alt="Näyttökuva 2022-4-23 kello 21 59 53" src="https://user-images.githubusercontent.com/55439398/164942730-2f2b8194-e1f0-4a22-a196-2d7ce772f354.png">
+
+
 ## Työaika
 Perjantai 22.4.2022: 3h
 
