@@ -4,6 +4,7 @@
 
 Ohjelma toteutettu kurssilla tiralabra keväällä 2022.
 
+
 ## Dokumentaatio
 [Määrittelydokumentti](https://github.com/amandahamynen/maze_solver/blob/main/dokumentaatio/maarittelydokumentti.md)
 
@@ -30,6 +31,10 @@ Ohjelma toteutettu kurssilla tiralabra keväällä 2022.
 [Viikko 4](https://github.com/amandahamynen/maze_solver/blob/main/dokumentaatio/coverage_report_week4.png)
 
 [Viikko 5](https://github.com/amandahamynen/maze_solver/blob/main/dokumentaatio/coverage_report_week5.png)
+
+## Algoritmien esittely video:
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/ig3_0bgtnF8/0.jpg)](https://youtu.be/ig3_0bgtnF8)
 
 ## Käyttöohje
 
