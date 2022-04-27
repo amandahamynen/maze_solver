@@ -32,7 +32,7 @@ Ohjelma toteutettu kurssilla tiralabra keväällä 2022.
 
 [Viikko 5](https://github.com/amandahamynen/maze_solver/blob/main/dokumentaatio/coverage_report_week5.png)
 
-## Algoritmien esittely video:
+## Algoritmien visualisointi -video:
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/ig3_0bgtnF8/maxresdefault.jpg)](https://youtu.be/ig3_0bgtnF8)
 
