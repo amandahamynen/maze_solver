@@ -35,7 +35,6 @@ Ohjelma toteutettu kurssilla tiralabra keväällä 2022.
 
 HUOM. Tällä hetkellä saattaa olla ongelmia asentaa projektin tarvitsemia kirjastoja linuxilla (kts. [issue](https://github.com/amandahamynen/maze_solver/issues/1)). MacOs ja Windows 10 kaikki vaikuttaa toimivan.
 
-EDIT. Ongelma vaikuttaa korjaantuvan sillä, että ennen kuin käyttää komentoa pip install -r requirements.txt, niin asentaa wheel-kirjaston komennolla pip install wheel.
 
 Projekti on tehty pythonin versiolla 3.8.10. Muilla python versioilla projektin toimivuutta ei ole taattu. 
 
@@ -56,16 +55,20 @@ cd maze_solver
 ```python
 python3 -m venv venv
 ```
+Linux/MacOs:
 
 ```python
 source venv/bin/activate
 ```
 
-(3.5. JOS KÄYTTÄÄ LINUXIA: Asenna wheel-kirjasto komennolla)
+Windows:
 
 ```python
-pip install wheel
+venv\Scripts\activate
 ```
+
+Huom. Jos tulee virhe "Running Scripts Is Disabled On This System", niin itselläni toimi seuraavan ohjeen seuraaminen:
+https://www.stanleyulili.com/powershell/solution-to-running-scripts-is-disabled-on-this-system-error-on-powershell/
 
 4. Asenna projektin tarvitsemat kirjastot virtuaaliympäristössä komennolla
 
