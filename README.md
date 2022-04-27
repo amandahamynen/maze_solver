@@ -34,7 +34,7 @@ Ohjelma toteutettu kurssilla tiralabra keväällä 2022.
 
 ## Algoritmien esittely video:
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/ig3_0bgtnF8/0.jpg)](https://youtu.be/ig3_0bgtnF8)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/ig3_0bgtnF8/maxresdefault.jpg)](https://youtu.be/ig3_0bgtnF8)
 
 ## Käyttöohje
 
