@@ -19,19 +19,7 @@ class App:
         self.aloitus_aika = 0
         self.lopetus_aika = 0
 
-    def visualise_tremaux(self):
-        while True:
-            koko = int(self.io.read("Labyrintin koko (anna yksi kokonaisluku): ").strip())
-            if koko >= 1:
-                break
-            else:
-                self.io.write("Koon tulee olla >= 1.")
-        while True:
-            nopeus = int(self.io.read("Simuloinnin nopeus millisekunteina (suositeltu 50): ").strip())
-            if nopeus >= 1:
-                break
-            else:
-                self.io.write("Nopeuden tulee olla >= 1.")
+    def visualise_tremaux(self, koko, nopeus):
         m = maze(koko,koko)
         m.CreateMaze()
         t = Tremaux(m, koko)
@@ -42,19 +30,7 @@ class App:
         m.tracePath({a:tremaux_reitti}, delay=nopeus)
         m.run()
 
-    def visualise_left_wall_follower(self):
-        while True:
-            koko = int(self.io.read("Labyrintin koko (anna yksi kokonaisluku): ").strip())
-            if koko >= 1:
-                break
-            else:
-                self.io.write("Koon tulee olla >= 1.")
-        while True:
-            nopeus = int(self.io.read("Simuloinnin nopeus millisekunteina (suositeltu 50): ").strip())
-            if nopeus >= 1:
-                break
-            else:
-                self.io.write("Nopeuden tulee olla >= 1.")
+    def visualise_left_wall_follower(self, koko, nopeus):
         m = maze(koko,koko)
         m.CreateMaze()
         f = LeftWallFollower(m, koko)
@@ -65,19 +41,7 @@ class App:
         m.tracePath({a:wall_follower_reitti}, delay=nopeus)
         m.run()
 
-    def visualise_dead_end_filler(self):
-        while True:
-            koko = int(self.io.read("Labyrintin koko (anna yksi kokonaisluku): ").strip())
-            if koko >= 1:
-                break
-            else:
-                self.io.write("Koon tulee olla >= 1.")
-        while True:
-            nopeus = int(self.io.read("Simuloinnin nopeus millisekunteina (suositeltu 50): ").strip())
-            if nopeus >= 1:
-                break
-            else:
-                self.io.write("Nopeuden tulee olla >= 1.")
+    def visualise_dead_end_filler(self, koko, nopeus):
         m = maze(koko,koko)
         m.CreateMaze()
         d = DeadEndFiller(m, koko)
@@ -90,19 +54,7 @@ class App:
         m.tracePath({b:dead_end_filler_reitti},showMarked=True, delay=nopeus)
         m.run()
 
-    def visualise_bfs(self):
-        while True:
-            koko = int(self.io.read("Labyrintin koko (anna yksi kokonaisluku): ").strip())
-            if koko >= 1:
-                break
-            else:
-                self.io.write("Koon tulee olla >= 1.")
-        while True:
-            nopeus = int(self.io.read("Simuloinnin nopeus millisekunteina (suositeltu 50): ").strip())
-            if nopeus >= 1:
-                break
-            else:
-                self.io.write("Nopeuden tulee olla >= 1.")
+    def visualise_bfs(self, koko, nopeus):
         m = maze(koko,koko)
         m.CreateMaze()
         b = Leveyshaku(m, koko)
@@ -140,7 +92,19 @@ class App:
                 komento_id = int(komento.strip())
                 toiminta = self.komennot.get(komento_id)
                 if toiminta:
-                    toiminta()
+                    while True:
+                        koko = int(self.io.read("Labyrintin koko (anna yksi kokonaisluku): ").strip())
+                        if koko >= 1:
+                            break
+                        else:
+                            self.io.write("Koon tulee olla >= 1.")
+                    while True:
+                        nopeus = int(self.io.read("Simuloinnin nopeus millisekunteina (suositeltu 50): ").strip())
+                        if nopeus >= 1:
+                            break
+                        else:
+                            self.io.write("Nopeuden tulee olla >= 1.")
+                    toiminta(koko, nopeus)
                     self.io.write(f"Algoritmiin kulunut aika: {self.lopetus_aika - self.aloitus_aika} s")
                     self.lopeta()
                 else:
