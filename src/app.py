@@ -92,6 +92,8 @@ class App:
                 komento_id = int(komento.strip())
                 toiminta = self.komennot.get(komento_id)
                 if toiminta:
+                    if komento_id == 5:
+                        toiminta()
                     while True:
                         koko = int(self.io.read("Labyrintin koko (anna yksi kokonaisluku): ").strip())
                         if koko >= 1:
