@@ -24,11 +24,6 @@ Ohjelma toteutettu kurssilla tiralabra keväällä 2022.
 [Viikkoraportti 5](https://github.com/amandahamynen/maze_solver/blob/main/dokumentaatio/viikkoraportti_5.md)
 
 ## Testikattavuus
-[Viikko 2](https://github.com/amandahamynen/maze_solver/blob/main/dokumentaatio/coverage_report_week2.png)
-
-[Viikko 3](https://github.com/amandahamynen/maze_solver/blob/main/dokumentaatio/coverage_report_week3.png)
-
-[Viikko 4](https://github.com/amandahamynen/maze_solver/blob/main/dokumentaatio/coverage_report_week4.png)
 
 [Viikko 5](https://github.com/amandahamynen/maze_solver/blob/main/dokumentaatio/coverage_report_week5.png)
 
@@ -38,7 +33,7 @@ Ohjelma toteutettu kurssilla tiralabra keväällä 2022.
 
 ## Käyttöohje
 
-HUOM. Tällä hetkellä saattaa olla ongelmia asentaa projektin tarvitsemia kirjastoja linuxilla (kts. [issue](https://github.com/amandahamynen/maze_solver/issues/1)). MacOs ja Windows 10 kaikki vaikuttaa toimivan.
+HUOM. Projekti ei vaikuta toimivan tällä hetkellä Linuxilla, katso [issue](https://github.com/amandahamynen/maze_solver/issues/1)). MacOs ja Windows 10 kaikki vaikuttaa toimivan.
 
 
 Projekti on tehty pythonin versiolla 3.8.10. Muilla python versioilla projektin toimivuutta ei ole taattu. 
