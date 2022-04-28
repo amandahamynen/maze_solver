@@ -31,6 +31,10 @@ suorituskykytestaus alkaa, ja komentoriville ilmestyy tähän liittyvät tiedot.
 
 <img width="1440" alt="Näyttökuva 2022-4-28 kello 14 59 10" src="https://user-images.githubusercontent.com/55439398/165748392-98c6994e-d9d9-4310-9fed-f4f2627ccfa0.png">
 
+## Video projektissa käytettyjen algoritmien visualisoinnista
+
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/ig3_0bgtnF8/maxresdefault.jpg)](https://youtu.be/ig3_0bgtnF8)
+
 
 ## Asennusohje
 
