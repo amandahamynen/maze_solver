@@ -101,18 +101,6 @@ class DeadEndFiller:
             mahdolliset.append([x+1,y,self.jaljet[x+1,y]])
         return mahdolliset
 
-    def on_umpikuja(self, ruutu):
-
-        """ Palauttaa tiedon siitä, onko kyseinen ruutu umpikuja.
-
-        Args:
-            ruutu: tuple-tyyppinen arvo, joka kertoo sen ruudun, jonka halutaan selvittää olevan umpikuja.
-        Returns:
-            boolean arvon, true jos ruutu on umpikuja ja false jos ei ole umpikuja.
-        """
-
-        return len(self.mahdolliset_liikkeet(ruutu)) == 1
-
     def dead_end_filling(self):
 
         """ Löytää reitin labyrintista noudattaen dead-end filling algoritmia.
@@ -140,7 +128,7 @@ class DeadEndFiller:
                     self.nykyinen_ruutu = self.umpikujat[0]
             if self.nykyinen_ruutu == self.maali:
                 self.etsinta.append(self.maali)
-            if self.on_umpikuja(self.nykyinen_ruutu):
+            if len(self.mahdolliset_liikkeet(self.nykyinen_ruutu)) == 1:
                 self.etsinta.append(self.nykyinen_ruutu)
                 self.jaljet[self.nykyinen_ruutu[0], self.nykyinen_ruutu[1]] = 2
                 seuraava = self.mahdolliset_liikkeet(self.nykyinen_ruutu)
