@@ -12,6 +12,8 @@ Ohjelma toteutettu kurssilla tiralabra keväällä 2022.
 
 [Toteutusraportti](https://github.com/amandahamynen/maze_solver/blob/main/dokumentaatio/toteutusraportti.md)
 
+[Käyttöohje](https://github.com/amandahamynen/maze_solver/blob/main/dokumentaatio/kayttoohje.md)
+
 ## Viikkoraportit
 [Viikkoraportti 1](https://github.com/amandahamynen/maze_solver/blob/main/dokumentaatio/viikkoraportti_1.md)
 
