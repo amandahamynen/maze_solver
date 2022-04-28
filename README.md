@@ -27,13 +27,15 @@ Ohjelma toteutettu kurssilla tiralabra keväällä 2022.
 
 ## Testikattavuus
 
+[Viikko 2](https://github.com/amandahamynen/maze_solver/blob/main/dokumentaatio/coverage_report_week2.png)
+
+[Viikko 3](https://github.com/amandahamynen/maze_solver/blob/main/dokumentaatio/coverage_report_week3.png)
+
+[Viikko 4](https://github.com/amandahamynen/maze_solver/blob/main/dokumentaatio/coverage_report_week4.png)
+
 [Viikko 5](https://github.com/amandahamynen/maze_solver/blob/main/dokumentaatio/coverage_report_week5.png)
 
-## Algoritmien visualisointi -video:
-
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/ig3_0bgtnF8/maxresdefault.jpg)](https://youtu.be/ig3_0bgtnF8)
-
-## Käyttöohje
+## Asennusohje
 
 HUOM. Projekti ei vaikuta toimivan tällä hetkellä Linuxilla, katso [issue](https://github.com/amandahamynen/maze_solver/issues/1). MacOs ja Windows 10 kaikki vaikuttaa toimivan.
 
