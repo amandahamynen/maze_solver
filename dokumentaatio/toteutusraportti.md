@@ -13,6 +13,24 @@ Luokat
 - Leveyshaku, tiedostossa bfs.py. Sisältää algoritmin toteutuksen, jolla labyrintistä löydetään maali noudattaen leveyshakualgoritmia.
 - Lisäksi luokat, joilla testataan jokaista algoritmia.
 
+## Käytetyt algoritmit
+
+### Trémaux
+
+tba
+
+### Left Wall Follower
+
+tba
+
+### Dead-End Filling
+
+tba
+
+### Leveyshaku
+
+tba
+
 ## Saavutetut aika- ja tilavaativuudet
 
 tba
