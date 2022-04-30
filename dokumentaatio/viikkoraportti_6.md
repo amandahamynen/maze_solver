@@ -21,5 +21,7 @@ Seuraava palautus onkin näköjään lopullinen palautus, joten tulen lähinnä 
 ## Työaika
 
 Keskiviikko 27.4.2022: 2h
+
 Torstai 28.4.2022: 2h
+
 Lauantai 30.4.2022: 4h
