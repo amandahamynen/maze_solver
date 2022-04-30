@@ -1,12 +1,18 @@
 import unittest
 from left_wall_follower import LeftWallFollower
 from pyamaze import maze
+from random import randint
 
 class TestLeftWallFollower(unittest.TestCase):
     def setUp(self):
         self.m_55 = maze(5,5)
         self.m_55.CreateMaze(loadMaze="data/maze-55.csv")
         self.f = LeftWallFollower(self.m_55, 5)
+
+        koko = randint(10,50)
+        self.satunnainen = maze(koko,koko)
+        self.satunnainen.CreateMaze()
+        self.wallfollower = LeftWallFollower(self.satunnainen, koko)
 
     def test_palauttaa_oikean_tiedon_vasemmasta_seinasta_kun_katse_E(self):
         self.f.katseen_suunta = 'E'
@@ -124,3 +130,8 @@ class TestLeftWallFollower(unittest.TestCase):
         self.f.maali_loytynyt = False
         self.f.wall_follower()
         self.assertEqual(self.f.maali_loytynyt, True)
+
+    def test_algoritmi_loytaa_maalin_satunnaisessa_labyrintissa(self):
+        self.wallfollower.maali_loytynyt = False
+        self.wallfollower.wall_follower()
+        self.assertEqual(self.wallfollower.maali_loytynyt, True)

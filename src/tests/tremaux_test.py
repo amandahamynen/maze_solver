@@ -1,12 +1,18 @@
 import unittest
 from tremaux import Tremaux
 from pyamaze import maze
+from random import randint
 
 class TestTremaux(unittest.TestCase):
     def setUp(self):
         self.m_55 = maze(5,5)
         self.m_55.CreateMaze(loadMaze="data/maze-55.csv")
         self.t = Tremaux(self.m_55, 5)
+
+        koko = randint(10,50)
+        self.satunnainen = maze(koko,koko)
+        self.satunnainen.CreateMaze()
+        self.tremaux = Tremaux(self.satunnainen, koko)
 
     def test_luo_ruudukon_jossa_oikea_maara_avaimia(self):
         n = 5
@@ -48,3 +54,13 @@ class TestTremaux(unittest.TestCase):
         viimeinen_indeksi = len(reitti) - 1
         self.assertAlmostEqual(reitti[0], (5,5))
         self.assertAlmostEqual(reitti[viimeinen_indeksi], (1,1))
+
+    def test_algoritmi_loytaa_maalin(self):
+        self.t.maali_loytynyt = False
+        self.t.tremaux()
+        self.assertEqual(self.t.maali_loytynyt, True)
+
+    def test_algoritmi_loytaa_maalin_satunnaisessa_labyrintissa(self):
+        self.tremaux.maali_loytynyt = False
+        self.tremaux.tremaux()
+        self.assertEqual(self.tremaux.maali_loytynyt, True)
