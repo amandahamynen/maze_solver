@@ -26,7 +26,7 @@ generoimisessa kestää pitkä aika, joten en ole näitä testejä vielä tehnyt
 
 ## Testauskattavuus
 
-<img width="826" alt="image" src="https://user-images.githubusercontent.com/55439398/164912683-c5d223f1-526d-4c3b-8109-a54ace4c5970.png">
+<img width="817" alt="coverage_report_week6" src="https://user-images.githubusercontent.com/55439398/166112744-cdc9a05b-1ee2-4aec-bd3f-266a476151bd.png">
 
 
 ## Miten testata unittestit omalla koneella
