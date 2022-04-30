@@ -37,7 +37,7 @@ Ohjelma toteutettu kurssilla tiralabra keväällä 2022.
 
 ## Asennusohje
 
-HUOM. Projekti ei vaikuta toimivan tällä hetkellä Linuxilla, katso [issue](https://github.com/amandahamynen/maze_solver/issues/1). MacOs ja Windows 10 kaikki vaikuttaa toimivan.
+HUOM. Jotta projekti toimisi Linuxilla, katso [issue 3](https://github.com/amandahamynen/maze_solver/issues/3). MacOs ja Windows 10 kaikki vaikuttaa toimivan.
 
 
 Projekti on tehty pythonin versiolla 3.8.10. Muilla python versioilla projektin toimivuutta ei ole taattu. 
