@@ -101,7 +101,7 @@ class App:
                         else:
                             self.io.write("Koon tulee olla >= 1.")
                     while True:
-                        nopeus = int(self.io.read("Simuloinnin nopeus millisekunteina (suositeltu 50): ").strip())
+                        nopeus = int(self.io.read("Simuloinnin nopeus millisekunteina: ").strip())
                         if nopeus >= 1:
                             break
                         else:
