@@ -13,27 +13,25 @@ Luokat
 - Leveyshaku, tiedostossa bfs.py. Sisältää algoritmin toteutuksen, jolla labyrintistä löydetään maali noudattaen leveyshakualgoritmia.
 - Lisäksi luokat, joilla testataan jokaista algoritmia.
 
-## Käytetyt algoritmit
-
-### Trémaux
-
-tba
-
-### Left Wall Follower
-
-tba
-
-### Dead-End Filling
-
-tba
-
-### Leveyshaku
-
-tba
 
 ## Saavutetut aika- ja tilavaativuudet
 
-tba
+### Trémaux:
+
+Aikavaativuus: O(n^2). Tilavaativuus O(n) sillä vieraillut ruudut tallennetaan muistiin.
+
+### Left Wall Follower:
+
+Aikavaativuus O(n+m), tilavaativuus O(n).
+
+### Dead-End Filling:
+
+Aikavaativuus O(n^2), sillä metodissa etsi_ja_merkitse_umpikujat on kaksi silmukkaa ja se on koodin hitain osa. Jälkeen päin mietittynä tämän olisi varmaan voinut toteuttaa tehokkaammalla tavalla. Tilavaativuus O(n) sillä vieraillut ruudut tallennetaan muistiin.
+
+### Leveyshaku: 
+
+Aikavaativuus O(n+m), tilavaativuus O(n).
+
 
 ## Suorituskyky ja O-analyysivertailu
 
