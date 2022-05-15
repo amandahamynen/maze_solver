@@ -24,6 +24,9 @@ generoimisessa kestää pitkä aika, joten en ole näitä testejä vielä tehnyt
 | 5000 x 5000     | 14.601413s | 0.0007209s         | 16.522065s      | 0.0003058s |
 
 
+![tiralabra](https://user-images.githubusercontent.com/55439398/168474945-fdc63f69-eda1-4c58-9e68-754943605028.png)
+
+
 ## Testauskattavuus
 
 <img width="817" alt="coverage_report_week6" src="https://user-images.githubusercontent.com/55439398/166112744-cdc9a05b-1ee2-4aec-bd3f-266a476151bd.png">
@@ -52,3 +55,4 @@ python3 src/suorituskykytestaus.py
 
 Komennon suorittamisen jälkeen tulee syöttää labyrintin koko antamalla yksi kokonaislukuarvo.
 
+Suorituskykytestien toisto onnistuu käynnistämällä suorituskykytestaus edellä mainitulla tavalla ja syöttämällä eri arvoja labyrintin kooksi.
